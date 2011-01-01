@@ -1,0 +1,10 @@
+#!/bin/sh
+
+pacman -S base-devel
+pacman -S curl
+
+/opt/ruby-enterprise/bin/passenger-install-apache2-module
+
+pacman -R gcc autoconf automake bison flex m4 patch
+
+pacman -S mod_perl

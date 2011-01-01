@@ -1,0 +1,50 @@
+ArchServer ALMStack
+
+The ArchServer ALMStack is a Software Stack for the development of software providing the whole stack for the
+Application Lifecycle Managment. The whole stack is based on the ArchServer (http://www.archserver.org) distribution.
+
+This means basically the following Components:
+
+# Redmine - project management software (bug tracking, wiki, forums, ...) found at http://redmine.org
+# Hudson - Continuous Integration Tool found at http://hudson-ci.org
+# Maven - the java build management Tool found at http://maven.apache.org
+# Sonar - Quality Management Software found at http://sonarsource.org
+# Nexus - Maven Repository Management found at http://sonatype.org
+# Git - Distributed Version Control found at http://git-scm.org
+
+The components are installed in the currently available VBox Image. 
+
+Components, which do use a database, are installed and configured to use the installed Postgresql-DB. The most
+components are reachable via the web, all these applications are hidden behind an apache proxy, and are reachable
+via the corresponding url:
+
+# http://HOSTNAME/redmine
+# http://HOSTNAME/hudson
+# http://HOSTNAME/sonar
+# http://HOSTNAME/nexus
+
+and for the maven project sites:
+
+# http://HOSTNAME/maven.
+
+The redmine hudson plugin (http://www.r-labs.org/) is already installed and configured in redmine.
+
+In this project the installation scripts and some additional configuration files (modified files) are published.
+
+TODO
+
+# integration of jabox.org
+# integration of gitosis (better: gitolite) and redmine
+# checkout plugin of redmine (http://www.redmine.org/plugins/redmine_checkout)
+# integration of codereview (probably: http://www.reviewboard.org/ or http://www.redmine.org/plugins/codereview)
+# replace nexus through artifactory or apache archiva?
+# redmine mylyn plugin
+# provide a download for eclipse (with all needed plugins, like hudson, m2eclipse, git and redmine mylyn)
+# provide a download for intellij idea?
+# provide not only a vbox image but also aws, and other virtualization - using varch?
+
+Change Log
+
+0.0.1
+
+# Initial version with the basic compontents installed, integration glue is still missing

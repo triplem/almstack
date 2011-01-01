@@ -1,0 +1,26 @@
+# Default setting for the ArchServer ALM Stack
+# we are using postgresql instead of MySql
+
+production:
+  adapter: postgresql
+  database: redmine
+  host: localhost
+  username: redmine
+  password: "redmine"
+  encoding: utf8
+
+development:
+  adapter: postgresql
+  database: redmine_dev
+  host: localhost
+  username: redmine
+  password: "redmine"
+  encoding: utf8  
+
+test:
+  adapter: postgresql
+  database: redmine_test
+  host: localhost
+  username: redmine
+  password: "redmine"
+  encoding: utf8  
